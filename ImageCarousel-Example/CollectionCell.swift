@@ -9,9 +9,18 @@ import UIKit
 
 class CollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var posterImageView: UIImageView!
+    
+    var movie: Movie? {
+            didSet {
+                posterImageView.image = movie?.posterImage
+            }
+        }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        posterImageView.contentMode = .scaleAspectFill
+        
     }
 
 }

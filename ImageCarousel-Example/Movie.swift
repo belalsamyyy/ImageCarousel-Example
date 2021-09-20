@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import UIKit
+
+struct Movie {
+    let posterImage: UIImage
+    
+    init(poster: UIImage) {
+        self.posterImage = poster
+    }
+}
